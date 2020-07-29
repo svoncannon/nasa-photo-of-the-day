@@ -13,9 +13,9 @@ export default function App() {
 
   console.log(nasaData);
   useEffect (() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=CIU85Nrp4bd2qaTwintv4a0Pd0K21PlVdJzimdWk')
+    axios.get('https://api.nasa.gov/planetary/apod?date=2020-07-28&api_key=CIU85Nrp4bd2qaTwintv4a0Pd0K21PlVdJzimdWk')
     .then(res => {
-      //console.log(res)
+      console.log(res)
       setNasaData(res.data)
     })
     .catch(err => {
@@ -24,8 +24,10 @@ export default function App() {
   }, [])
   return (
     <div className="App">
-      <Image url = {nasaData.title} copyright = {nasaData.copyright} description = {nasaData.explaination}/>
-      <PlanetList/>
+      <Image url={nasaData.url}/>
+      <NasaCard title={nasaData.title} copyright={nasaData.copyright} description={nasaData.explanation}/>
+      
+    
     </div>
   );
 }
