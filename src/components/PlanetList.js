@@ -33,6 +33,7 @@ function PlanetList() {
                    englishName={filteredBody.englishName} 
                    date={filteredBody.discoveryDate} 
                    person={filteredBody.discoveredBy}
+                   moons = {filteredBody.moons !== null ? filteredBody.moons.length : 0}
                    />
                )
            })}

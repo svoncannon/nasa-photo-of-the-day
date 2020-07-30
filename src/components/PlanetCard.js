@@ -26,8 +26,10 @@ const PlanetCard = (props) => {
             <h3>Planet Name: {props.name}</h3>
             <h4>English Name: {props.englishName}</h4>
             <div>
+                <p>Moons: {props.moons}</p>
                 <p>Discovered: {props.date}</p>
                 <p>Discovered By: {props.person}</p>
+                
             </div>
         </StyledPlanetCard>
     )
