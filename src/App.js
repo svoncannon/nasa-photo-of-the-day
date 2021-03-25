@@ -38,8 +38,8 @@ function App() {
 
   return (
     <div>
-      <p>Lets see if we can get something to work here</p>
-      <Image url={nasaData.url}/>
+      
+      <Image mediatype ={nasaData.media_type}/>
       <Title title ={nasaData.title}/>
       <DateBox date={nasaData.date}/> 
       <Description description={nasaData.explanation}/>
