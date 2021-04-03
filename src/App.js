@@ -6,7 +6,7 @@ import axios from 'axios'
 import { format } from 'date-fns'
 
 //import components
-import Image from './components/GetImage'
+import Photo from './components/Photo'
 import Title from './components/Title'
 import DateBox from './components/DateBox'
 import Description from './components/Description'
@@ -38,9 +38,8 @@ function App() {
 
   return (
     <div>
-      
-      <Image mediatype ={nasaData.media_type}/>
       <Title title ={nasaData.title}/>
+      <Photo image ={nasaData.url}/>
       <DateBox date={nasaData.date}/> 
       <Description description={nasaData.explanation}/>
       <NewDate changeDate={changeDate}/>
